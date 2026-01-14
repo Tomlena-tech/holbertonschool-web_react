@@ -19,3 +19,6 @@ const student2: Student = {
     location: 'France'
 };
 const studentsList: Student[] = [student1, student2];
+
+const table: HTMLTableElement = document.createElement('table');
+const headerRow: HTMLTableRowElement = table.insertRow();
