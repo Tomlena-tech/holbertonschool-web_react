@@ -25,3 +25,26 @@ const printTeacher = (firstName: string, lastName: string): string => {
 console.log(printTeacher('John', 'Doe'));
 console.log(printTeacher('Jane', 'Smith'));
 
+class StudentClass {
+  firstName: string;
+  lastName: string;
+  workingOnHomework: string;
+  displayName:string;
+
+  constructor(firstName: string, lastName: string) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.displayName = `${firstName} ${lastName}`;
+    this.workingOnHomework = 'false';
+  }
+
+  workOnHomework(): string {
+    this.workingOnHomework = 'true';
+    return 'Currently working';
+  }
+
+  displayNameMethod(): string {
+    return this.displayName;
+  }
+  
+}
