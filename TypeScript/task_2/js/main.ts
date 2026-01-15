@@ -65,6 +65,52 @@
       return this.firstName;
     }
   }
+  //task 5 -
+  interface DirectorInterface {
+    workFromHome(): string;
+    getCoffeeBreak():string;
+    workDirectorTasks():string;
+
+  }
+  interface TeacherInterface {
+    workFromHome(): string;
+    getCoffeeBreak():string;
+    workTeacherTasks():string;
+
+  }
+  class DirectorClass implements DirectorInterface {
+    workFromHome(): string {
+      return 'Working from home';
+    }
+    getCoffeeBreak(): string {
+      return 'Getting a coffee break';
+    }
+    workDirectorTasks(): string {
+      return 'Getting to director tasks';
+    }
+  }
+  class TeacherClass implements TeacherInterface {
+    workFromHome(): string {
+      return 'Cannot work from home';
+    }
+    getCoffeeBreak(): string {
+      return 'Cannot have a break';
+    }
+    workTeacherTasks(): string {
+      return 'Getting to work';
+    }
+  }
+
+  function createEmployee(salary: number | string): DirectorClass | TeacherClass {
+    if (typeof salary === 'number' && salary < 500) {
+      return new TeacherClass();
+    } else {
+      return new DirectorClass();
+    }
+  }
+
+
+
   
   // Tests
   console.log(teacher3);
@@ -73,4 +119,8 @@
   const student = new StudentClass('John', 'Doe');
   console.log(student.displayName());
   console.log(student.workOnHomework());
+  console.log(createEmployee(200));
+  console.log(createEmployee(1000));
+  console.log(createEmployee('$500'));
+
 
