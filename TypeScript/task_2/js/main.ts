@@ -108,6 +108,17 @@
       return new DirectorClass();
     }
   }
+  // Task_6 -
+  function isDirector(employee: DirectorClass | TeacherClass): employee is DirectorClass {
+    return (employee as DirectorClass).workDirectorTasks !== undefined;
+  }
+  function executeWork(employee):
+    
+  
+  
+  if (employee is DirectorClass | TeacherClass): employee is DirectorClass {
+    return (employee as DirectorClass).workDirectorTasks !== undefined;
+  }
 
 
 
