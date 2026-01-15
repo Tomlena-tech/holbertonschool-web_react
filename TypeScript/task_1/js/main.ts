@@ -5,6 +5,7 @@ interface Teacher {
     yearsOfExperience?: number,
     location: string,
     contract?: boolean,
+    key?: string,
 }
 
 const teacher3: Teacher = {
