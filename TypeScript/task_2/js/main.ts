@@ -145,5 +145,9 @@
   console.log(createEmployee(200));
   console.log(createEmployee(1000));
 
+  
 
+//task_7
+  console.log(teachClass('Math'));
+  console.log(teachClass('History'));
 
