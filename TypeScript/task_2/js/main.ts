@@ -119,7 +119,16 @@
       return employee.workTeacherTasks();
     }
   }
-
+  // Task_7 -
+  type Subjects = 'Math' | 'History';
+  function teachClass(todayClass:Subjects): string {
+    if (todayClass === 'Math') {
+      return 'Math';
+    } 
+    else {
+      return 'History';
+    }
+  }
 
 
   
