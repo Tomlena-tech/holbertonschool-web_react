@@ -115,4 +115,7 @@
   const student = new StudentClass('John', 'Doe');
   console.log(student.displayName());
   console.log(student.workOnHomework());
+  console.log(createEmployee(200));
+  console.log(createEmployee(1000));
+  console.log(createEmployee('$500'));
 
