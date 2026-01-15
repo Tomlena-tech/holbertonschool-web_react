@@ -112,12 +112,12 @@
   function isDirector(employee: DirectorClass | TeacherClass): employee is DirectorClass {
     return (employee as DirectorClass).workDirectorTasks !== undefined;
   }
-  function executeWork(employee):
-    
-  
-  
-  if (employee is DirectorClass | TeacherClass): employee is DirectorClass {
-    return (employee as DirectorClass).workDirectorTasks !== undefined;
+  function executeWork(employee: DirectorClass | TeacherClass): string {
+    if (isDirector(employee)) {
+      return employee.workDirectorTasks();
+    } else {
+      return employee.workTeacherTasks();
+    }
   }
 
 
@@ -133,5 +133,8 @@
   console.log(createEmployee(200));
   console.log(createEmployee(1000));
   console.log(createEmployee('$500'));
+  console.log(createEmployee(200));
+  console.log(createEmployee(1000));
+
 
 
